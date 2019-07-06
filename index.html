@@ -34,13 +34,14 @@ function getCookie(cookie_name) {
 }
    //쿠키 함수---------------------------------------------------
   
-var R = Math.floor(Math.random()*100);
-var map = Math.floor(Math.random()*100);
-setCookie('R',R,1);     //제시어
+var R = Math.floor(Math.random()*100);//제시어
+var map = Math.floor((Math.random()*100)%pN);//마피아 번호
+setCookie('R',R,1);     
 setCookie('pN',pN,1);   //플레이어수
+setCookie('map',map,1);
 
 
-alert("제시어는 "+getCookie('R')+", 마피아번호는 " +map);
+alert("제시어는 "+getCookie('R')+", 마피아번호는 " +map+", 플러에어 수는 "+pN);
 </script>
 
 </html>
