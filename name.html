@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<script type="text/javascript">
+  var pN=request.getParameter("pN");  //플레이어수
+  var i=reguest.getParameter("i");
+  if(i==1){ //처음 사람이면 마피아를 정한다
+    var map = Math.floor((Math.random()*100)%pN);//마피아 번호
+    setCookie('map',map,1);
+    alert("마피아 번호는 " +getCookie('map'));
+  }
+  
+  
+</script>
+  
+  
+  
+  <form action="keyword.html" method="get">
+    플레이어 이름
+    <input type="text" id="playerName">
+    <input type="submit">
+  </form>
+
+</body>
+
+</html>
+
+
