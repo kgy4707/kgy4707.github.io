@@ -37,7 +37,7 @@ function getCookie(cookie_name) {
 }
    //쿠키 함수---------------------------------------------------
   
-  var pN=request.getParameter('pN');  //플레이어수
+  var pN=getCookie('pN'); //플레이어수
   alert("pN은"+pN);
   var i=getCookie('i');
   if(i==1){ //처음 사람이면 마피아를 정한다
