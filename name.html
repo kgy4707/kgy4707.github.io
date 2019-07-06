@@ -2,10 +2,43 @@
 
 <html>
 
+  
+  
+  
+  
 <body>
+  
+  
+
 <script type="text/javascript">
+  
+    //쿠키 함수---------------------------------------------------
+  function setCookie(cookie_name, value, days) {
+  var exdate = new Date();
+  exdate.setDate(exdate.getDate() + days);
+  // 설정 일수만큼 현재시간에 만료값으로 지정
+
+  var cookie_value = escape(value) + ((days == null) ? '' : ';    expires=' + exdate.toUTCString());
+  document.cookie = cookie_name + '=' + cookie_value;
+}
+
+function getCookie(cookie_name) {
+  var x, y;
+  var val = document.cookie.split(';');
+
+  for (var i = 0; i < val.length; i++) {
+    x = val[i].substr(0, val[i].indexOf('='));
+    y = val[i].substr(val[i].indexOf('=') + 1);
+    x = x.replace(/^\s+|\s+$/g, ''); // 앞과 뒤의 공백 제거하기
+    if (x == cookie_name) {
+      return unescape(y); // unescape로 디코딩 후 값 리턴
+    }
+  }
+}
+   //쿠키 함수---------------------------------------------------
+  
   var pN=request.getParameter("pN");  //플레이어수
-  var i=reguest.getParameter("i");
+  var i=getCookie("i");
   if(i==1){ //처음 사람이면 마피아를 정한다
     var map = Math.floor((Math.random()*100)%pN);//마피아 번호
     setCookie('map',map,1);
