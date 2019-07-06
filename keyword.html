@@ -45,6 +45,9 @@ function getCookie(cookie_name) {
          setCookie("players",players,1);
         </script>
         
-        <%=result%>
+        <p id="name">홍길동</p>
+        <script>
+        document.getElementById('name').innerHTML=result;
+        </script>
     </body>
 </html>
