@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        제시어
+    </head>
+    <body>
+    
+        <script type="text/javascript">
+        var players = new Array(); //플레이어 배열
+        players=getCookie('players'); //쿠키에서 배열 가져옴
+        var i=request.getParameter('i');
+        var keyword = "사자"; //text 배열로 만들어서 getCookie('R')번째 단어
+        var map=getCookie('map');
+        var pN=getCookie('pN');
+             if(pN==map){
+                 result="당신은 마피아입니다."
+             }else{
+                 result="제시어는 "+keyword+"입니다.";
+             }
+         players[i++]=request.getParameter('name');
+         setCookie("players",players,1);
+        </script>
+        
+        <%=result>
+    </body>
+</html>
