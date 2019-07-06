@@ -35,9 +35,12 @@ function getCookie(cookie_name) {
    //쿠키 함수---------------------------------------------------
   
 var R = Math.floor(Math.random()*100);
-setCookie('R',R,1);
+var map = Math.floor(Math.random()*100);
+setCookie('R',R,1);     //제시어
+setCookie('pN',pN,1);   //플레이어수
 
-alert(getCookie('R'));
+
+alert("제시어는 "+getCookie('R')+", 마피아번호는 " +map);
 </script>
 
 </html>
